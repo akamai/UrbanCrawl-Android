@@ -1,0 +1,90 @@
+<!--
+Copyright 2017 Akamai Technologies, Inc
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#412647"
+    tools:context="com.akamaidev.urbancrawlapp.SplashActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aka_dev_logo_white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="88dp"
+        android:layout_above="@+id/app_logo_container"/>
+
+    <LinearLayout android:id="@+id/app_logo_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/logo_white_trans" />
+
+        <TextView
+            android:id="@+id/app_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:keepScreenOn="true"
+            android:text="@string/app_first_name"
+            android:textColor="#ffffff"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/app_second_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:keepScreenOn="true"
+            android:text="@string/app_second_name"
+            android:textColor="#ffffff"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_logo_container"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto"
+        android:keepScreenOn="true"
+        android:text="@string/app_tagline"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/app_aka_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto"
+        android:keepScreenOn="true"
+        android:text="A reference app from Akamai Developer"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

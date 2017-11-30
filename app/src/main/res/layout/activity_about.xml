@@ -1,0 +1,109 @@
+<!--
+Copyright 2017 Akamai Technologies, Inc
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.akamaidev.urbancrawlapp.PlanTravelActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/about_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="About"
+        android:textColor="@color/grey_text"
+        android:textSize="32sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/about_header"
+        android:layout_marginTop="12dp"
+        android:background="@color/grey_bg">
+
+
+        <TextView
+            android:id="@+id/about_seller_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/roboto"
+            android:text="Seller:"
+            android:textSize="20sp"
+            android:textColor="@color/uc_purple" />
+
+        <TextView
+            android:id="@+id/about_seller_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="#0813ed"
+            android:layout_toRightOf="@+id/about_seller_label"
+            android:textSize="20sp"
+            android:text="Akamai Developer" />
+
+        <TextView
+            android:id="@+id/about_version_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@+id/about_seller_label"
+            android:text="Version:"
+            android:textSize="20sp"
+            android:textColor="@color/uc_purple" />
+
+        <TextView
+            android:id="@+id/about_version_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/roboto_light"
+            android:layout_below="@+id/about_seller_label"
+            android:textColor="#000000"
+            android:layout_toRightOf="@+id/about_version_label"
+            android:textSize="20sp"
+            android:text="1.0" />
+
+        <TextView
+            android:id="@+id/about_disclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:layout_alignParentBottom="true"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="UrbanCrawl is a reference app from Akamai Developer" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

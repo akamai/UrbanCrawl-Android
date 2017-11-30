@@ -1,0 +1,8 @@
+/build
+/app/build/generated
+/app/build/intermediates
+/app/build/tmp
+/app-release.apk
+/src/androidTest/
+/src/test/
+/fabric.properties

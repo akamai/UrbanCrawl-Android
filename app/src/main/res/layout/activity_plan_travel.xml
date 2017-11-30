@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright 2017 Akamai Technologies, Inc
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.akamaidev.urbancrawlapp.PlanTravelActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/about_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Plan your travel"
+        android:textColor="@color/grey_text"
+        android:textSize="32sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/about_header"
+        android:layout_marginTop="12dp"
+        android:background="@color/grey_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/plantravel_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/plantravel_city_label" />
+
+            <Spinner
+                android:id="@+id/plantravel_city_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/plantravel_city_label"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_light" />
+
+            <TextView
+                android:id="@+id/plantravel_dates_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plantravel_city_spinner"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/plantravel_dates_header" />
+
+            <TextView
+                android:id="@+id/plantravel_startdate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/plantravel_city_spinner"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="22dp"
+                android:textColor="@color/uc_purple"
+                android:fontFamily="@font/roboto"
+                android:text="@string/start_date_label" />
+
+            <TextView
+                android:id="@+id/about_version_val"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/plantravel_dates_header"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:textColor="@color/uc_purple"
+                android:textSize="20sp"
+                tools:text="August 5, 2017" />
+
+            <TextView
+                android:id="@+id/plantravel_enddate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/about_version_val"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="22dp"
+                android:textColor="@color/uc_purple"
+                android:fontFamily="@font/roboto"
+                android:text="@string/end_date_label" />
+
+            <TextView
+                android:id="@+id/plantravel_enddate_val"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/plantravel_enddate_label"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:textColor="@color/uc_purple"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="20sp"
+                tools:text="August 10, 2017" />
+
+            <ImageView android:id="@+id/plantravel_save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_save"
+                android:layout_below="@+id/plantravel_enddate_val"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:id="@+id/plantravel_save_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plantravel_save_btn"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/uc_purple"
+                android:layout_marginTop="6dp"
+                android:textSize="16sp"
+                android:text="save" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

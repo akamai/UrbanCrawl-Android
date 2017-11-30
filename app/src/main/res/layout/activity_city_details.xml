@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright 2017 Akamai Technologies, Inc
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.-->
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.akamaidev.urbancrawlapp.CityDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/home_city_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@+id/toolbar"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/home_city_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/row_gradient" />
+
+            <TextView
+                android:id="@+id/home_cityname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                tools:text="Tokyo" />
+
+            <TextView
+                android:id="@+id/home_countryname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_cityname"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="-8dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:text="Japan" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_city_title">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/home_heroimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/home_cityname_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_heroimage"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/grey_text"
+                    tools:text="Tokyo" />
+
+                <TextView
+                    android:id="@+id/home_places_of_interest_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_cityname_small"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Places of Interest"
+                    android:textColor="@color/uc_purple"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_places_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_places_of_interest_label"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/home_aboutcity_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_places_recycler"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="About City"
+                    android:textColor="@color/uc_purple"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/home_aboutcity_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_aboutcity_label"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/dark_grey_text"
+                    android:textSize="14sp"
+                    tools:text="@string/dummy_text" />
+
+                <LinearLayout
+                    android:id="@+id/home_besttime_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_aboutcity_value"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_best_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Best Time to Visit: "
+                        android:textColor="@color/uc_purple"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/home_besttime_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/dark_grey_text"
+                        android:textSize="14sp"
+                        tools:text="9AM-11PM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_currency_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_besttime_container"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_currency" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Currency: "
+                        android:textColor="@color/uc_purple"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/home_currency_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/dark_grey_text"
+                        android:textSize="14sp"
+                        tools:text="Japanese Yen" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_language_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_currency_container"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_language" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Language: "
+                        android:textColor="@color/uc_purple"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/home_language_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/dark_grey_text"
+                        android:textSize="14sp"
+                        tools:text="Japanese" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_population_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_language_container"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_population" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Population: "
+                        android:textColor="@color/uc_purple"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/home_population_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/dark_grey_text"
+                        android:textSize="14sp"
+                        tools:text="9.273" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_distance_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_population_container"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_distance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Distance from current: "
+                        android:textColor="@color/uc_purple"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/home_distance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/dark_grey_text"
+                        android:textSize="14sp"
+                        tools:text="5144.94 mi" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/layout_log_overlay" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

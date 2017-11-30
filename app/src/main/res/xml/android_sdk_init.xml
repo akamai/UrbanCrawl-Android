@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com_akamai_sdk_init>
+    <!--   SDK   license   key   created   on   portal-->
+    <com_akamai_sdk_license_key><!--Your-MAP-SDK-License-Key--></com_akamai_sdk_license_key>
+    <!--   In   case   of   MAP   license,   this   is   comma   separated   list   of   segments   to   register   with (optional)-->
+    <com_akamai_sdk_segments>all_cities_list</com_akamai_sdk_segments>
+    <!--Regional   info   (optional)-->
+    <com_akamai_sdk_region></com_akamai_sdk_region>
+    <!--SDK   user   id   specified   by   the   app   (optional)-->
+    <com_akamai_sdk_sdk_user_id></com_akamai_sdk_sdk_user_id>
+</com_akamai_sdk_init>
