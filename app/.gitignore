@@ -5,4 +5,7 @@
 /app-release.apk
 /src/androidTest/
 /src/test/
+/src/main/AndroidManifest.xml
+/src/main/res/xml/android_sdk_init.xml
+/src/main/res/values/font_certs.xml
 /fabric.properties

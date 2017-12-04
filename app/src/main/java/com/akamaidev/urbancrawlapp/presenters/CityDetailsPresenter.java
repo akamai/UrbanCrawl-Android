@@ -2,10 +2,10 @@ package com.akamaidev.urbancrawlapp.presenters;
 
 import android.content.Context;
 
+import com.akamaidev.urbancrawlapp.helpers.Logs;
 import com.akamaidev.urbancrawlapp.jsonobjs.City;
 import com.akamaidev.urbancrawlapp.jsonobjs.CityForHome;
 import com.akamaidev.urbancrawlapp.models.CityDetailsModel;
-import com.crashlytics.android.Crashlytics;
 
 import retrofit.RetrofitError;
 
@@ -44,7 +44,7 @@ public class CityDetailsPresenter {
             @Override
             public void onError(RetrofitError t) {
                 if(t != null) {
-                    Crashlytics.logException(t);
+                    Logs.logException(t);
                 }
                 callback.onCityDetailsError();
             }

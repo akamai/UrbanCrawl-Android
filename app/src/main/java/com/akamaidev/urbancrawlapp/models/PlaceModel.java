@@ -7,6 +7,7 @@ import com.akamaidev.urbancrawlapp.MAPSDKWrappers.OkHttpStack;
 import com.akamaidev.urbancrawlapp.helpers.Constants;
 import com.akamaidev.urbancrawlapp.helpers.Helper;
 import com.akamaidev.urbancrawlapp.helpers.LogEvent;
+import com.akamaidev.urbancrawlapp.helpers.Logs;
 import com.akamaidev.urbancrawlapp.jsonobjs.Place;
 import com.akamaidev.urbancrawlapp.jsonobjs.PlaceDetails;
 import com.android.volley.Request;
@@ -15,7 +16,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.crashlytics.android.Crashlytics;
 import com.google.gson.Gson;
 
 import okhttp3.OkHttpClient;
@@ -67,7 +67,7 @@ public class PlaceModel {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Helper.writeAndPublishLogs(ctx, new LogEvent("Failed to load ",(Constants.GET_PLACE_DETAILS + "?id=" + placeId), 0));
-                Crashlytics.logException(error);
+                Logs.logException(error);
                 callback.onError(error);
             }
         });

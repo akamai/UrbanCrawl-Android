@@ -1,5 +1,5 @@
 ## What is Urban Crawl ##
-Urban Crawl is a tiny catalogue of a few selected cities that you can carry along, and explore the interesting places around these cities.
+[Urban Crawl](https://play.google.com/store/apps/details?id=com.akamaidev.urbancrawlapp) is a tiny catalogue of a few selected cities that you can carry along, and explore the interesting places around these cities.
 
 ### Why was Urban Crawl made ###
 Urban Crawl is a reference app from Akamai Developer, which demonstrates the capabilities and usage of Akamai's MAP SDK (https://developer.akamai.com/tools/map/)

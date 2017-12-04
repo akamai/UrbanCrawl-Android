@@ -17,11 +17,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
+import com.akamaidev.urbancrawlapp.AboutActivity;
 import com.akamaidev.urbancrawlapp.LogViewerActivity;
 import com.akamaidev.urbancrawlapp.PlanTravelActivity;
 import com.akamaidev.urbancrawlapp.R;
-import com.akamaidev.urbancrawlapp.AboutActivity;
-import com.crashlytics.android.Crashlytics;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -193,8 +192,7 @@ public class Helper {
             outputStreamWriter.close();
         }
         catch (IOException e) {
-            e.printStackTrace();
-            Crashlytics.logException(e);
+            Logs.logException(e);
         }
     }
 
@@ -219,11 +217,9 @@ public class Helper {
             ret = stringBuilder.toString();
         }
         catch (FileNotFoundException e) {
-            e.printStackTrace();
-            Crashlytics.logException(e);
+            Logs.logException(e);
         } catch (IOException e) {
-            e.printStackTrace();
-            Crashlytics.logException(e);
+            Logs.logException(e);
         }
 
         return ret;
