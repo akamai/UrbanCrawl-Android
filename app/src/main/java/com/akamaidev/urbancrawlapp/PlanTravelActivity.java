@@ -106,6 +106,8 @@ public class PlanTravelActivity extends AppCompatActivity implements PlanTravelP
                 int selectedPos = ((Spinner)findViewById(R.id.plantravel_city_spinner)).getSelectedItemPosition();
 
                 if(spinnerValues.size() > 1){
+                    PlanTravelPresenter planTravelPresenter = new PlanTravelPresenter();
+                    planTravelPresenter.planTravel(spinnerValues.get(selectedPos), PlanTravelActivity.this);
                     PlanTravelActivity.this.finish();
                 }
             }

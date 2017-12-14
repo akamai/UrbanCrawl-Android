@@ -3,6 +3,7 @@ package com.akamaidev.urbancrawlapp.presenters;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.akamai.android.sdk.VocService;
 import com.akamaidev.urbancrawlapp.jsonobjs.CityForList;
 import com.akamaidev.urbancrawlapp.models.HomeModel;
 
@@ -59,6 +60,13 @@ public class PlanTravelPresenter {
             }
 
         }.execute();
+    }
+
+    public void planTravel(String cityName, Context ctx){
+
+        // MAP SDK Usage : Updating Segment Subscription
+        VocService vocService = VocService.createVocService(ctx);
+        vocService.updateSegmentSubscription(new String[]{cityName});
     }
 
 }
