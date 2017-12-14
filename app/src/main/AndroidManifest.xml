@@ -36,7 +36,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="-- Fabric Key--" />
+            android:value="70bc94f753dbab29dab04fdef818fc3de34456ac" />
 
 
         <activity android:name="com.akamaidev.urbancrawlapp.CityDetailsActivity" />
