@@ -27,6 +27,8 @@ import java.util.ArrayList;
  * limitations under the License.
  */
 
+// MAP SDK : This class uses default networking client which is based on AkaURLConnection
+
 public class PhotoGalleryModel {
 
     public ArrayList<MediaObj> getMediaByPlaceId(Context ctx, int placeId){

@@ -56,10 +56,13 @@ dependencies {
     compile 'it.sephiroth.android.library.imagezoom:imagezoom:2.3.0'
     compile 'net.danlew:android.joda:2.9.9'
     compile 'org.greenrobot:eventbus:3.0.0'
+    //Adding MAP SDK dependencies
     compile 'com.google.android.gms:play-services-base:10.2.1'
     compile 'com.google.android.gms:play-services-gcm:10.2.1'
-    compile 'com.akamai.android:map-sdk:18.3.3@aar'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     compile 'com.android.volley:volley:1.0.0'
+    compile 'com.firebase:firebase-jobdispatcher:0.8.5'
+    //Declaing MAP SDK inclusion
+    compile 'com.akamai.android:map-sdk:18.4.+@aar'
 }

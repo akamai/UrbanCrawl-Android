@@ -120,6 +120,7 @@ public class PlaceDetailsActivity extends AppCompatActivity implements PlaceDeta
             findViewById(R.id.log_overlay).setVisibility(View.GONE);
         }
 
+        // MAP SDK Usage : Getting Network Quality
         int networkQuality = vocService.getNetworkQuality();
 
         switch (networkQuality){

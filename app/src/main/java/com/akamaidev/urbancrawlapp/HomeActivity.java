@@ -85,6 +85,7 @@ public class HomeActivity extends AppCompatActivity implements CitiesListAdapter
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        // MAP SDK Usage : Initializing MAP SDK
         vocService = VocService.createVocService(getApplicationContext());
         Logger.setLevel(Constants.AkaLogLevel);
 
@@ -164,6 +165,7 @@ public class HomeActivity extends AppCompatActivity implements CitiesListAdapter
             findViewById(R.id.log_overlay).setVisibility(View.GONE);
         }
 
+        // MAP SDK Usage : Getting Network Quality
         int networkQuality = vocService.getNetworkQuality();
 
         switch (networkQuality){

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.akamaidev.urbancrawlapp">
 
+    <!--Declaring MAP SDK related permissions along with other permissions-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,10 +20,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- Declaring MAP SDK Content Provider -->
         <provider
             android:name="com.akamai.android.sdk.db.AnaContentProvider"
             android:authorities="com.akamaidev.urbancrawlapp.AnaContentProvider">
         </provider>
+
+        <!-- Declaring MAP SDK Meta Data -->
+        <meta-data
+            android:name="com.akamai.android.sdk"
+            android:resource="@xml/android_sdk_init" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -30,9 +37,7 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="-- Fabric Key--" />
-        <meta-data
-            android:name="com.akamai.android.sdk"
-            android:resource="@xml/android_sdk_init" />
+
 
         <activity android:name="com.akamaidev.urbancrawlapp.CityDetailsActivity" />
 

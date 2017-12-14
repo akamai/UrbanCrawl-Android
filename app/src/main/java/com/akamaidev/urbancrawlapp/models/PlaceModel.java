@@ -36,6 +36,8 @@ import okhttp3.OkHttpClient;
  * limitations under the License.
  */
 
+// MAP SDK : This class uses "Volley" and the MAP SDK OkHttp Wrapper
+
 public class PlaceModel {
 
     public interface PlaceModelCallback{

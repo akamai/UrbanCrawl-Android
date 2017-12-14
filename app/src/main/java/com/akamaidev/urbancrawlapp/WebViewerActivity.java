@@ -43,6 +43,8 @@ public class WebViewerActivity extends AppCompatActivity {
 
         WebView webView = (WebView)findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
+
+        // MAP SDK Usage : Using WebView Client
         if(Build.VERSION.SDK_INT>=21){
             webView.setWebViewClient(new AkaWebViewL21Client());
         }else{

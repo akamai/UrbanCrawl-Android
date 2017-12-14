@@ -27,9 +27,14 @@ import java.util.ArrayList;
  * limitations under the License.
  */
 
+// MAP SDK : This class uses default networking client which is based on AkaURLConnection
+
 public class HomeModel {
 
     public ArrayList<CityForList> getAllCities(Context ctx){
+
+        // MAP SDK Usage : Using Default Networking Client
+
         DefaultNetworkingClient defaultNetworkingClient = new DefaultNetworkingClient();
 
         String jsonStr = defaultNetworkingClient.makeBlockingGetCall(ctx, Constants.GET_ALL_CITIES, Constants.METHOD_GET);

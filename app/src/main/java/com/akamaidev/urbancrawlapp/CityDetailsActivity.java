@@ -141,6 +141,7 @@ public class CityDetailsActivity extends AppCompatActivity implements CityDetail
             findViewById(R.id.log_overlay).setVisibility(View.GONE);
         }
 
+        // MAP SDK Usage : Getting Network Quality
         int networkQuality = vocService.getNetworkQuality();
 
         switch (networkQuality){

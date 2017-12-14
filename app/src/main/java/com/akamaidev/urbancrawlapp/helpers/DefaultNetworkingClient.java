@@ -33,6 +33,8 @@ public class DefaultNetworkingClient {
     public String makeBlockingGetCall(Context ctx, String urlString, String method){
         Analytics.logStartEvent(ctx, "DefaultNetworkingClient, URL: "+urlString);
         long startTime = System.currentTimeMillis();
+
+        // MAP SDK Usage : Using AkaURLConnection
         AkaURLConnection httpURLConnection = null;
         try {
             URL url = new URL(null, urlString, new AkaURLStreamHandler());

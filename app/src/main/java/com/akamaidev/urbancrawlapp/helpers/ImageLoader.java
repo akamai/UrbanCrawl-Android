@@ -25,6 +25,8 @@ import com.squareup.picasso.Picasso;
  * limitations under the License.
  */
 
+// MAP SDK : This class uses "Picasso" and the MAP SDK Picasso Downloader
+
 public class ImageLoader {
 
     static long timeTaken;

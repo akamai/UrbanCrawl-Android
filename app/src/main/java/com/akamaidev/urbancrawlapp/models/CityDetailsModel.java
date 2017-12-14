@@ -31,6 +31,8 @@ import retrofit.client.Response;
  * limitations under the License.
  */
 
+// MAP SDK : This class uses "Retrofit" and the MAP SDK Retrofit Wrapper
+
 public class CityDetailsModel {
 
     public interface CityDetailsModelCallback{
