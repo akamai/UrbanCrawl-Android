@@ -15,6 +15,7 @@ import com.akamaidev.urbancrawlapp.helpers.Analytics;
 import com.akamaidev.urbancrawlapp.helpers.DatePickerFragment;
 import com.akamaidev.urbancrawlapp.helpers.Helper;
 import com.akamaidev.urbancrawlapp.jsonobjs.CityForList;
+import com.akamaidev.urbancrawlapp.presenters.HomePresenter;
 import com.akamaidev.urbancrawlapp.presenters.PlanTravelPresenter;
 
 import net.danlew.android.joda.DateUtils;
@@ -39,7 +40,7 @@ import java.util.ArrayList;
  * limitations under the License.
  */
 
-public class PlanTravelActivity extends AppCompatActivity implements PlanTravelPresenter.PlanTravelCallback, DatePickerFragment.OnDateSetListener{
+public class PlanTravelActivity extends AppCompatActivity implements HomePresenter.CitiesListCallback, DatePickerFragment.OnDateSetListener{
 
     Toolbar toolbar;
 
@@ -57,7 +58,7 @@ public class PlanTravelActivity extends AppCompatActivity implements PlanTravelP
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        PlanTravelPresenter planTravelPresenter = new PlanTravelPresenter();
+        HomePresenter homePresenter = new HomePresenter();
 
         startDate = DateTime.now().plusDays(3);
         endDate = startDate.plusDays(15);
@@ -113,8 +114,7 @@ public class PlanTravelActivity extends AppCompatActivity implements PlanTravelP
             }
         });
 
-        planTravelPresenter.getCitiesNames(this, this);
-
+        homePresenter.getCitiesNames(this, this);
         Analytics.logEvent(this, "Plan Travel Activity Opened");
     }
 

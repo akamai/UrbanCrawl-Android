@@ -20,7 +20,7 @@ import com.akamai.android.sdk.Logger;
 
 public class Constants {
 
-    public static final String BASE_URL = "https://terraplanet.herokuapp.com/";
+    public static final String BASE_URL = "http://api.urbancrawlapp.com/";
     public static final String API_SUFFIX = "api/";
     public static final String GET_ALL_CITIES = BASE_URL + API_SUFFIX + "cities/getAllCities";
     public static final String GET_CITY_DETAILS = BASE_URL + API_SUFFIX + "cities/getCityDetails";

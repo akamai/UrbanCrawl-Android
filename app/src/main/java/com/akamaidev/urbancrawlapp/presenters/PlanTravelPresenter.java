@@ -27,41 +27,6 @@ import java.util.ArrayList;
 
 public class PlanTravelPresenter {
 
-    public interface PlanTravelCallback{
-        public void onCitiesListError();
-        public void onCitiesListSuccess(ArrayList<CityForList> citiesList);
-    }
-
-    public void getCitiesNames(final Context ctx, final PlanTravelCallback callback){
-
-
-        new AsyncTask<Void, Void, Integer>(){
-
-            ArrayList<CityForList> citiesList = null;
-
-            @Override
-            public Integer doInBackground(Void... v){
-
-                HomeModel homeModel = new HomeModel();
-
-                citiesList = homeModel.getAllCities(ctx);
-
-                return (null != citiesList ? 1 : -1);
-            }
-
-            @Override
-            protected void onPostExecute(Integer result){
-                super.onPostExecute(result);
-                if(result == -1){
-                    callback.onCitiesListError();
-                }else{
-                    callback.onCitiesListSuccess(citiesList);
-                }
-            }
-
-        }.execute();
-    }
-
     public void planTravel(String cityName, Context ctx){
 
         // MAP SDK Usage : Updating Segment Subscription
