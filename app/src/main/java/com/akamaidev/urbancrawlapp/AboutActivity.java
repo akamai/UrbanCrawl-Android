@@ -1,6 +1,8 @@
 package com.akamaidev.urbancrawlapp;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -56,6 +58,16 @@ public class AboutActivity extends AppCompatActivity {
         });
 
         Analytics.logEvent(this, "About Activity Opened");
+
+        String versionName = "1.0";
+        try {
+            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            versionName = packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        ((TextView)findViewById(R.id.about_version_val)).setText(versionName);
 
     }
 
